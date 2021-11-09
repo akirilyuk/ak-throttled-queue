@@ -50,7 +50,7 @@
     "format": "prettier-eslint --write \"src/**/*.js\" \"test/**/*.js\"",
     "security": "yarn audit --groups dependencies optionalDependencies --registry=https://registry.npmjs.org",
     "outofdate": "yarn outdated --registry=https://registry.yarnpkg.com/; OUTDATED_RESULT=$? && exit $OUTDATED_RESULT",
-    "duplicated": "jsinspect -t 30 ./src",
+    "duplicated": "jsinspect --ignore ./src/examples.js -t 30 ./src ",
     "lint": "eslint .",
     "test": "export NPDE_ENV=TEST && yarn run jest",
     "release:patch": "npm version patch --no-git-tag-version && git add . && git commit -m \"🔖  Bump patch version\"",
