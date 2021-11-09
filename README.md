@@ -84,10 +84,11 @@ try{
   // > Error: queue stopped, aborting!
 }
 
-
-
-
-
 ```
 
+# Commiting
+
+The project uses commitlint so please follow the commit message guidelines there:
+
+[commitlint](https://github.com/conventional-changelog/commitlint)
 
