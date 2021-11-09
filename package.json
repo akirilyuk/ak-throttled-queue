@@ -56,7 +56,8 @@
     "release:patch": "npm version patch --no-git-tag-version && git add . && git commit -m \"🔖  Bump patch version\"",
     "release:minor": "npm version minor --no-git-tag-version && git add . && git commit -m \"🔖  Bump minor version\"",
     "release:major": "npm version major --no-git-tag-version && git add . && git commit -m \"🔖  Bump major version\"",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "install-from-yarn": "yarn --registry=https://registry.yarnpkg.com/;"
   },
   "jest-junit": {
     "outputName": "./test-results.xml",
