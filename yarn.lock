@@ -233,7 +233,7 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@commitlint/cli@^14.1.0":
+"@commitlint/cli@14.2.0":
   version "14.1.0"
   resolved "https://cognigy.pkgs.visualstudio.com/_packaging/cognigy-feed/npm/registry/@commitlint/cli/-/cli-14.1.0.tgz#7b657a955ed22f3df348ba9afa6ce5a5121ff7eb"
   integrity sha1-e2V6lV7SLz3zSLqa+mzlpRIf9+s=
