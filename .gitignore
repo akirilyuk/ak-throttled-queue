@@ -1,0 +1,9 @@
+.DS_Store
+.idea
+.idea/*
+coverage
+node_modules
+*.log
+.env.development
+test-report.xml
+test-results.xml
