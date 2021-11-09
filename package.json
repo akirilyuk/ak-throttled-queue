@@ -3,22 +3,22 @@
   "maintainers": [
     "Alexander Kirilyuk"
   ],
-  "version": "0.0.6",
+  "version": "0.0.0-semantic-release",
   "main": "src/index.js",
   "license": "MIT",
   "author": "Alexander Kirilyuk",
   "description": "throttled queue for async functions",
   "repository": " https://github.com/akirilyuk/ak-throttled-queue",
   "devDependencies": {
-    "commitizen": "4.0.3",
-    "cz-gitmoji": "0.0.7",
+    "@commitlint/cli": "14.1.0",
+    "@commitlint/config-conventional": "^14.1.0",
     "eslint": "6.8.0",
     "eslint-config-airbnb-base": "14.1.0",
     "eslint-config-prettier": "6.10.0",
     "eslint-plugin-import": "2.20.1",
     "eslint-plugin-jest": "23.8.2",
     "eslint-plugin-prettier": "3.1.2",
-    "husky": "4.2.3",
+    "husky": "^7.0.4",
     "jest": "25.1.0",
     "jest-extended": "0.11.5",
     "jest-junit-reporter": "1.1.0",
@@ -50,24 +50,14 @@
     "format": "prettier-eslint --write \"src/**/*.js\" \"test/**/*.js\"",
     "security": "yarn audit --groups dependencies optionalDependencies --registry=https://registry.npmjs.org",
     "outofdate": "yarn outdated --registry=https://registry.yarnpkg.com/; OUTDATED_RESULT=$? && exit $OUTDATED_RESULT",
-    "duplicated": "jsinspect -t 30 ./src",
+    "duplicated": "jsinspect --ignore ./src/examples.js -t 30 ./src ",
     "lint": "eslint .",
     "test": "export NPDE_ENV=TEST && yarn run jest",
-    "preci_flow": "yarn && yarn security && yarn duplicated",
-    "commit": "git-cz",
     "release:patch": "npm version patch --no-git-tag-version && git add . && git commit -m \"🔖  Bump patch version\"",
     "release:minor": "npm version minor --no-git-tag-version && git add . && git commit -m \"🔖  Bump minor version\"",
-    "release:major": "npm version major --no-git-tag-version && git add . && git commit -m \"🔖  Bump major version\""
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-gitmoji"
-    }
-  },
-  "husky": {
-    "hooks": {
-      "pre-push": "yarn duplicated && yarn lint && yarn test"
-    }
+    "release:major": "npm version major --no-git-tag-version && git add . && git commit -m \"🔖  Bump major version\"",
+    "prepare": "husky install",
+    "install-from-yarn": "yarn --registry=https://registry.yarnpkg.com/;"
   },
   "jest-junit": {
     "outputName": "./test-results.xml",
