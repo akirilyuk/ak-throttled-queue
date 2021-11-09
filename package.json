@@ -1,0 +1,79 @@
+{
+  "name": "ak-throttled-queue",
+  "maintainers": [
+    "Alexander Kirilyuk"
+  ],
+  "version": "0.0.6",
+  "main": "src/index.js",
+  "license": "MIT",
+  "author": "Alexander Kirilyuk",
+  "description": "throttled queue for async functions",
+  "repository": " https://github.com/akirilyuk/ak-throttled-queue",
+  "devDependencies": {
+    "commitizen": "4.0.3",
+    "cz-gitmoji": "0.0.7",
+    "eslint": "6.8.0",
+    "eslint-config-airbnb-base": "14.1.0",
+    "eslint-config-prettier": "6.10.0",
+    "eslint-plugin-import": "2.20.1",
+    "eslint-plugin-jest": "23.8.2",
+    "eslint-plugin-prettier": "3.1.2",
+    "husky": "4.2.3",
+    "jest": "25.1.0",
+    "jest-extended": "0.11.5",
+    "jest-junit-reporter": "1.1.0",
+    "jest-teamcity-reporter": "0.9.0",
+    "jsinspect": "0.12.7",
+    "prettier": "1.19.1",
+    "prettier-eslint-cli": "5.0.0"
+  },
+  "resolutions": {
+    "**/braces": "3.0.2",
+    "**/js-yaml": "3.13.1",
+    "**/handlebars": "4.7.3",
+    "**/marked": "0.8.0",
+    "**/tar": "6.0.1",
+    "**/fstream": "1.0.12",
+    "**/lodash": "4.17.15",
+    "**/lodash.merge": "4.6.2",
+    "**/mixin-deep": "2.0.1",
+    "**/set-value": "3.0.1",
+    "**/jest-leak-detector": "25.1.0",
+    "**/babel-preset-jest": "25.1.0",
+    "**/eslint-utils": "2.0.0",
+    "**/https-proxy-agent": "5.0.0",
+    "**/kind-of": "^6.0.3",
+    "**/acorn": "^7.1.1",
+    "**/minimist": "^1.2.3"
+  },
+  "scripts": {
+    "format": "prettier-eslint --write \"src/**/*.js\" \"test/**/*.js\"",
+    "security": "yarn audit --groups dependencies optionalDependencies --registry=https://registry.npmjs.org",
+    "outofdate": "yarn outdated --registry=https://registry.yarnpkg.com/; OUTDATED_RESULT=$? && exit $OUTDATED_RESULT",
+    "duplicated": "jsinspect -t 30 ./src",
+    "lint": "eslint .",
+    "test": "export NPDE_ENV=TEST && yarn run jest",
+    "preci_flow": "yarn && yarn security && yarn duplicated",
+    "commit": "git-cz",
+    "release:patch": "npm version patch --no-git-tag-version && git add . && git commit -m \"🔖  Bump patch version\"",
+    "release:minor": "npm version minor --no-git-tag-version && git add . && git commit -m \"🔖  Bump minor version\"",
+    "release:major": "npm version major --no-git-tag-version && git add . && git commit -m \"🔖  Bump major version\""
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-gitmoji"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "yarn duplicated && yarn lint && yarn test"
+    }
+  },
+  "jest-junit": {
+    "outputName": "./test-results.xml",
+    "outputDirectory": "."
+  },
+  "engines": {
+    "node": ">=12.13.0"
+  }
+}
