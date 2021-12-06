@@ -11,7 +11,9 @@
   "repository": " https://github.com/akirilyuk/ak-throttled-queue",
   "devDependencies": {
     "@commitlint/cli": "14.1.0",
-    "@commitlint/config-conventional": "^14.1.0",
+    "@commitlint/config-conventional": "^15.0.0",
+    "@commitlint/prompt": "15.0.0",
+    "commitizen": "^4.2.4",
     "eslint": "6.8.0",
     "eslint-config-airbnb-base": "14.1.0",
     "eslint-config-prettier": "6.10.0",
@@ -57,7 +59,8 @@
     "release:minor": "npm version minor --no-git-tag-version && git add . && git commit -m \"🔖  Bump minor version\"",
     "release:major": "npm version major --no-git-tag-version && git add . && git commit -m \"🔖  Bump major version\"",
     "prepare": "husky install",
-    "install-from-yarn": "yarn --registry=https://registry.yarnpkg.com/;"
+    "install-from-yarn": "yarn --registry=https://registry.yarnpkg.com/;",
+    "commit": "git-cz"
   },
   "jest-junit": {
     "outputName": "./test-results.xml",
@@ -65,5 +68,10 @@
   },
   "engines": {
     "node": ">=12.13.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/prompt"
+    }
   }
 }
