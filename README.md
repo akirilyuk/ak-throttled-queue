@@ -1,4 +1,4 @@
-# lp-throttled-queue
+# ak-throttled-queue
 
 throttled queue for node.js. Async functions only.
 
