@@ -2,8 +2,6 @@
 
 throttled queue for node.js. Async functions only.
 
-[Teamcity](http://teamcity/viewType.html?buildTypeId=RnD_Mannheim_Misc_LpThrottledQueue&tab=buildTypeStatusDiv&branch_RnD_Mannheim_Misc=__all_branches__)
-
 ## Example
 
 ```js
