@@ -1,4 +1,4 @@
 module.exports = {
   extends: ['@commitlint/config-conventional'],
-  'footer-max-line-length': 20000
+  'footer-max-line-length': 'never'
 };
