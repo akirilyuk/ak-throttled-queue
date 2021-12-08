@@ -7,7 +7,7 @@ throttled queue for node.js. Async functions only.
 ```js
 // autostart false
 
-const ThrottledQueue = require('lp-throttled-queue');
+const ThrottledQueue = require('ak-throttled-queue');
 
 const queue = new ThrottledQueue({
     interval: 1000,
