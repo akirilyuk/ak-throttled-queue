@@ -2,29 +2,30 @@ name: Pull Request Checker
 
 on:
   pull_request:
-    branches: 
-     - develop
+    branches:
+      - develop
+      - master
 jobs:
   pull-request:
     name: Pull Request
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-    - name: Setup Node.js
-      uses: actions/setup-node@v1
-      with:
-        node-version: 16.x
-    - name: Install Yarn
-      run: npm install -g yarn
-    - name: Install dependencies
-      run: yarn
-    - name: Security
-      run: yarn security
-    - name: Duplicated
-      run: yarn duplicated   
-    - name: Lint
-      run: yarn lint
-    - name: Test
-      run: yarn test  
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16.x
+      - name: Install Yarn
+        run: npm install -g yarn
+      - name: Install dependencies
+        run: yarn
+      - name: Security
+        run: yarn security
+      - name: Duplicated
+        run: yarn duplicated
+      - name: Lint
+        run: yarn lint
+      - name: Test
+        run: yarn test
