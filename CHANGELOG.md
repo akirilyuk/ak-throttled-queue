@@ -1,3 +1,17 @@
+## [1.1.1](https://github.com/akirilyuk/ak-throttled-queue/compare/v1.1.0...v1.1.1) (2021-12-08)
+
+
+### Bug Fixes
+
+* **readme:** change readme ([fad4a13](https://github.com/akirilyuk/ak-throttled-queue/commit/fad4a133087934bdf89a7af449e7c4cdcf44baf3))
+
+# [1.1.0](https://github.com/akirilyuk/ak-throttled-queue/compare/v1.0.0...v1.1.0) (2021-12-08)
+
+
+### Features
+
+* **README:** imrpve readme ([b80e2de](https://github.com/akirilyuk/ak-throttled-queue/commit/b80e2de88e1ce0ea260078f55337688b9ef0cc53))
+
 # 1.0.0 (2021-12-06)
 
 
