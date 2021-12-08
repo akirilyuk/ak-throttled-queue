@@ -1,6 +1,6 @@
 {
   "LABEL": {
-    "name": "title needs formatting",
+    "name": "Title needs to be semantic https://github.com/semantic-release/semantic-release#commit-message-format",
     "color": "EEEEEE"
   },
   "CHECKS": {
