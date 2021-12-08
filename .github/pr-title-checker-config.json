@@ -1,6 +1,6 @@
 {
   "LABEL": {
-    "name": "Title needs to be semantic https://github.com/semantic-release/semantic-release#commit-message-format",
+    "name": "Title needs to be semantic",
     "color": "EEEEEE"
   },
   "CHECKS": {
@@ -24,6 +24,6 @@
   "MESSAGES": {
     "success": "All OK",
     "failure": "Failing CI test",
-    "notice": ""
+    "notice": "Please check this https://github.com/semantic-release/semantic-release#commit-message-format"
   }
 }
