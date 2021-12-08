@@ -110,5 +110,3 @@ a valid semantic message format
 ## Releases
 
 To trigger a new release simply create and merge a PR to the main branch.
-
-CHANGED
