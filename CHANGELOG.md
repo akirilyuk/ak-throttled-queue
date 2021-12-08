@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/akirilyuk/ak-throttled-queue/compare/v1.1.0...v1.1.1) (2021-12-08)
+
+
+### Bug Fixes
+
+* **readme:** change readme ([fad4a13](https://github.com/akirilyuk/ak-throttled-queue/commit/fad4a133087934bdf89a7af449e7c4cdcf44baf3))
+
 # [1.1.0](https://github.com/akirilyuk/ak-throttled-queue/compare/v1.0.0...v1.1.0) (2021-12-08)
 
 
