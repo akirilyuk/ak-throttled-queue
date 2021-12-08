@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/akirilyuk/ak-throttled-queue/compare/v1.2.0...v1.3.0) (2021-12-08)
+
+
+### Features
+
+* **ci:** add pr checks for main branch ([#21](https://github.com/akirilyuk/ak-throttled-queue/issues/21)) ([c6ef719](https://github.com/akirilyuk/ak-throttled-queue/commit/c6ef719ea13282bab921a7ca4ba21f74b5b51b77))
+
 # [1.2.0](https://github.com/akirilyuk/ak-throttled-queue/compare/v1.1.1...v1.2.0) (2021-12-08)
 
 
