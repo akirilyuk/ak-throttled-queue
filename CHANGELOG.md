@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/akirilyuk/ak-throttled-queue/compare/v1.1.1...v1.2.0) (2021-12-08)
+
+
+### Features
+
+* **ci:** change commit message hook ([#18](https://github.com/akirilyuk/ak-throttled-queue/issues/18)) ([be4b2aa](https://github.com/akirilyuk/ak-throttled-queue/commit/be4b2aa8c317b465009dd9b17939702bd14b26c5))
+
 ## [1.1.1](https://github.com/akirilyuk/ak-throttled-queue/compare/v1.1.0...v1.1.1) (2021-12-08)
 
 
