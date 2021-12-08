@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/akirilyuk/ak-throttled-queue/compare/v1.3.0...v1.4.0) (2021-12-08)
+
+
+### Features
+
+* **ci:** improve PR title checker ([#23](https://github.com/akirilyuk/ak-throttled-queue/issues/23)) ([bbc283b](https://github.com/akirilyuk/ak-throttled-queue/commit/bbc283b686c96dfc8180c7a529cd1425fe95bd85))
+
 # [1.3.0](https://github.com/akirilyuk/ak-throttled-queue/compare/v1.2.0...v1.3.0) (2021-12-08)
 
 
