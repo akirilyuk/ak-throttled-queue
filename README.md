@@ -98,4 +98,15 @@ The project uses commitlint so please follow the commit message guidelines there
 yarn commit # runs a commit promt with semver conform commit messages
 ```
 
-Change readme
+# Workflow
+
+## Adding new features/fixes
+
+Create a PR with your code to the develop branch. Please take care that your PR title follows the [semantic message format](https://github.com/semantic-release/semantic-release#commit-message-format)
+
+Once your PR is reviewed and approved, merge it via a SQUASH MERGE commit. Please take care that the title of your squash merge commit is
+a valid semantic message format
+
+## Releases
+
+To trigger a new release simply create and merge a PR to the main branch.
