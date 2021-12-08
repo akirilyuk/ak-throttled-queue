@@ -1,6 +1,6 @@
 # ak-throttled-queue
 
-throttled queue for node.js. Async functions only.
+Throttled queue for node.js. Async functions only. No guarantee for sync functions.
 
 ## Example
 
@@ -10,29 +10,33 @@ throttled queue for node.js. Async functions only.
 const ThrottledQueue = require('ak-throttled-queue');
 
 const queue = new ThrottledQueue({
-    interval: 1000,
-    concurrency: 5,
-    autostart: false
+  interval: 1000,
+  concurrency: 5,
+  autostart: false
 });
 
 // note if autostart is false, you cannot await the fn execution if you are in the same scope since this will block
 // this below wont work!
 
 const result = await queue.push(async () => {
-   return new Promise((resolve) => setTimeout( () => {
-       resolve('resolved');
-       }, 1000));
-})
+  return new Promise(resolve =>
+    setTimeout(() => {
+      resolve('resolved');
+    }, 1000)
+  );
+});
 
 queue.start();
 
-// this will work 
+// this will work
 
 const resultPromise = queue.push(async () => {
-    return new Promise((resolve) => setTimeout( () => {
-        resolve('resolved');
-        }, 1000));
-})
+  return new Promise(resolve =>
+    setTimeout(() => {
+      resolve('resolved');
+    }, 1000)
+  );
+});
 
 queue.start();
 
@@ -41,47 +45,47 @@ const result = await resultPromise;
 // autostart true (default)
 
 const queue = new ThrottledQueue({
-    interval: 1000,
-    concurrency: 5
+  interval: 1000,
+  concurrency: 5
 });
 // this will work
 
 const result = await queue.push(async () => {
-   return new Promise((resolve) => setTimeout( () => {
-       resolve('resolved');
-       }, 1000));
-})
-
+  return new Promise(resolve =>
+    setTimeout(() => {
+      resolve('resolved');
+    }, 1000)
+  );
+});
 
 // queue end with drain = true
 
 const endPromise = queue.end();
 
 // this will throw an error, because queue is in ending state
-queue.push(async () => {})
+queue.push(async () => {});
 
 await endPromise;
 
 // this will work, since queue is clean and finished draining
-queue.push(async () => {})
+queue.push(async () => {});
 
 // queue end with drain = false (all queued functions will be rejected with an error
 const queue = new ThrottledQueue({
-    interval: 1000,
-    concurrency: 5,
-    autostart: false
+  interval: 1000,
+  concurrency: 5,
+  autostart: false
 });
 const queueFnPromise = queue.push(async () => {});
 
-await queue.end( { drain : false } );
+await queue.end({ drain: false });
 
-try{
+try {
   await queueFnPromise;
-}catch(error) { 
+} catch (error) {
   console.log(error);
   // > Error: queue stopped, aborting!
 }
-
 ```
 
 # Commiting
@@ -90,3 +94,6 @@ The project uses commitlint so please follow the commit message guidelines there
 
 [commitlint](https://github.com/conventional-changelog/commitlint)
 
+```bash
+yarn commit # runs a commit promt with semver conform commit messages
+```
