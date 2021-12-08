@@ -97,3 +97,5 @@ The project uses commitlint so please follow the commit message guidelines there
 ```bash
 yarn commit # runs a commit promt with semver conform commit messages
 ```
+
+Change readme
