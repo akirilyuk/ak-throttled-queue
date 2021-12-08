@@ -9,24 +9,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-    - name: Setup Node.js
-      uses: actions/setup-node@v1
-      with:
-        node-version: 16.x
-    - name: Install Yarn
-      run: npm install -g yarn
-    - name: Install dependencies
-      run: yarn
-    - name: Install semantic-release extra plugins
-      run: yarn add --dev @semantic-release/changelog @semantic-release/git      
-    - name: Lint
-      run: yarn lint
-    - name: Test
-      run: yarn test  
-    - name: Release
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-      run: npx semantic-release
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16.x
+      - name: Install Yarn
+        run: npm install -g yarn
+      - name: Install dependencies
+        run: yarn
+      - name: Install semantic-release extra plugins
+        run: yarn add --dev @semantic-release/changelog @semantic-release/git
+      - name: Lint
+        run: yarn lint
+      - name: Test
+        run: yarn test
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npx semantic-release
